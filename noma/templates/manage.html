@@ -1,0 +1,42 @@
+<body>
+    {%extends 'base.html'%}
+    {% block content %}
+    {{block.super}}
+    <div class="container">
+    
+     <div class="row">
+       {# displaying index Image #}
+    {% for image_item in image%}
+       <div class="col-xs-4 col-sm-4 col-md-4 mt-5">
+         <div class="card" style="width: 14rem;">
+         <img class="card-img-top" src="{{image_item.image.url}}" class="img-responsive" alt="{{image_item.image_name}}">
+           <div class="card-body">
+    
+           <a href="{% url 'image' image_item.id %}" class="btn btn-blue float-right">about &rarr;</a>
+           </div>
+         </div>
+    
+       </div>
+       {% empty %}
+      <div class="row">
+        <h1 class="text-center text" style="padding-left: 500px; color: white">END</h1>
+      </div>
+      {% endfor %}
+      <style>
+         body{
+           background-image: url(../static/images/pictest4.jpg);
+           background-attachment: fixed;
+           background-repeat: round;
+           color: white;
+        }
+      </style>
+    </body>
+         </div>
+    <center><footer>
+      <div class="copy">
+          <p>&copy; Management. All Rights Reserved | Design by <a>management.</a> </p>
+      </div>
+    </footer></center>
+    </div>
+    {% endblock %}
+    
