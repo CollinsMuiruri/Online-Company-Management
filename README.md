@@ -1,4 +1,4 @@
-![Online-Company-Management](nomas.png)
+![Online-Company-Management](https://bit.ly/2sjqwcp)
 
 ## Simona-Flowers.Online-Company-Management
 
